@@ -1,0 +1,72 @@
+.sidebar {
+  margin-top: 70px;
+  padding: auto;
+  padding-top: 5%;
+  width: 300px;
+  background-color: #bbbbbb;
+  position: absolute;
+  height: 90.51%;
+  /* overflow: auto; */
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar a.active {
+  background-color: #4ea0ae;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-left: 300px;
+}
+
+.main_title{
+  margin-top: 4rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.section{
+  padding-top: 7rem;
+  margin: 1rem 1.5rem;
+  width: 80%;
+  align-content: center;
+}
+
+p{
+  font-size: 16px;
+}
+
+.content{
+  color: #202020;
+  width: 100%;
+  text-align: center;
+  margin: 5rem 0;
+}
+.content .header{
+  font-size: 45px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 40px;
+  font-weight: 700;
+}

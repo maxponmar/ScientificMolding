@@ -1,0 +1,42 @@
+header {
+  width: 100%;
+  height: 70px;
+  background: #03506f;
+  position: absolute;
+}
+
+h1{
+  position: absolute;
+  padding: 3px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 8px;
+  color: #e8e8e8;
+}
+
+span {
+  color: #f05454;
+}
+
+ul {
+  width: auto;
+  float: right;
+  margin-top: 2px;
+  padding-right: 10px;
+}
+
+li {
+  display: inline-block;
+  padding: 15px 30px;
+}
+
+a{
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2vw;
+}
+a:hover{
+  color: #f05454;
+  transition: 0.5s;
+}

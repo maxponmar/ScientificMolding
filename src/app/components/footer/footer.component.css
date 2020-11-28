@@ -1,0 +1,21 @@
+footer {
+  background-color: #2d6187;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer_title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.footer_social {
+  margin-bottom: 1rem;
+}
+
+.footer_link {
+  font-size: 0.9rem;
+  color: #e8e8e8;
+  margin: 0 1rem;
+}
