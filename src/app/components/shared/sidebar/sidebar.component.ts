@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { ChangethemeService } from 'src/app/services/changetheme.service';
 import { SidebarService } from 'src/app/services/sidebar.service';
 
 @Component({
-  selector: 'app-mainmenu',
-  templateUrl: './mainmenu.component.html',
-  styleUrls: ['./mainmenu.component.css']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class MainmenuComponent implements OnInit {
+export class SidebarComponent implements OnInit {  
 
   isOpen = false;
+  isByHover = false;
   isLight = true;
 
   constructor(
-    private sidebarService: SidebarService,
+    public sidebarService: SidebarService,
     public changeThemeService: ChangethemeService
   ) { }
 
@@ -25,5 +26,18 @@ export class MainmenuComponent implements OnInit {
       this.isLight = isLight;
     });
   }
+
+  enterHover(){
+    this.isByHover = true;
+    if(!this.isOpen){
+      this.sidebarService.toggleSidebar();
+    }
+  }
+
+  leaveHover(){
+    if (this.isOpen){
+      this.sidebarService.toggleSidebar();
+    }
+  }  
 
 }

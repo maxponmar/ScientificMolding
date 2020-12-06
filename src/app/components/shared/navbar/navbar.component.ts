@@ -3,13 +3,12 @@ import { ChangethemeService } from 'src/app/services/changetheme.service';
 import { SidebarService } from 'src/app/services/sidebar.service';
 
 @Component({
-  selector: 'app-mainmenu',
-  templateUrl: './mainmenu.component.html',
-  styleUrls: ['./mainmenu.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class MainmenuComponent implements OnInit {
+export class NavbarComponent implements OnInit {
 
-  isOpen = false;
   isLight = true;
 
   constructor(
@@ -18,12 +17,16 @@ export class MainmenuComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.sidebarService.change.subscribe((isOpen: boolean)=> {
-      this.isOpen = isOpen;
-    });
     this.changeThemeService.change.subscribe((isLight: boolean)=> {
       this.isLight = isLight;
     });
   }
 
+  toggleSidebar(){
+    this.sidebarService.toggleSidebar();
+  }  
+
+  toggleTheme(){
+    this.changeThemeService.toggleTheme();
+  }
 }
