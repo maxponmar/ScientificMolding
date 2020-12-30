@@ -1,0 +1,23 @@
+.wrapper {
+	padding: 10px;
+	margin-left: 82px;
+	padding-top: 75px;
+	transition: margin-left .5s;
+}
+
+
+h1{
+	color: #433d3c;
+	text-align:center;
+	margin-top:150px;
+	text-shadow:1px 1px 1px black;
+	font-size:50px;
+}
+
+p{
+	color: #944e6c;
+	text-align:center;
+	margin-top:10px;
+	text-shadow:1px 1px 1px black;
+	font-size:30px;
+}

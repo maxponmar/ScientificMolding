@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ChangethemeService } from 'src/app/services/changetheme.service';
 import { SidebarService } from 'src/app/services/sidebar.service';
 
@@ -12,10 +13,15 @@ export class ViscosityCurveComponent implements OnInit {
   isOpen = false;
   isLight = true;
 
+  // viscosityCurveForm: FormGroup;
+
   constructor(
     private sidebarService: SidebarService,
+    private formBuilder: FormBuilder,
     public changeThemeService: ChangethemeService
-  ) { }
+  ) { 
+    // this.createFormulary();
+  }
 
   ngOnInit(): void {
     this.sidebarService.change.subscribe((isOpen: boolean)=> {
@@ -25,5 +31,12 @@ export class ViscosityCurveComponent implements OnInit {
       this.isLight = isLight;
     });
   }
+
+  // createFormulary() {
+  //   this.viscosityCurveForm = this.formBuilder.group({
+  //     intensificationRatio: [0],
+
+  //   });
+  // }
 
 }
