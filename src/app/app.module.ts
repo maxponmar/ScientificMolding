@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { MainmenuComponent } from './components/mainmenu/mainmenu.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 import { CavityBalanceComponent } from './components/mainmenu/cavity-balance/cavity-balance.component';
@@ -22,8 +21,7 @@ import { HomeComponent } from './components/mainmenu/home/home.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    MainmenuComponent,
+    FooterComponent,    
     NavbarComponent,
     SidebarComponent,
     CavityBalanceComponent,

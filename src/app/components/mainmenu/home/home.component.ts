@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChangethemeService } from 'src/app/services/changetheme.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  isLight = true;
+  
+  constructor(
+    public changeThemeService: ChangethemeService
+  ) { }
 
   ngOnInit(): void {
+    this.changeThemeService.change.subscribe((isLight: boolean)=> {
+      this.isLight = isLight;
+    });
   }
 
 }
