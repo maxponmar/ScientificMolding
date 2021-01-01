@@ -29,9 +29,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/fontawesome-free/css/all.min.css"
+              "src/assets/fontawesome-free/css/all.min.css",
+              "node_modules/handsontable/dist/handsontable.full.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/handsontable/dist/handsontable.full.min.js"
+            ]
           },
           "configurations": {
             "production": {

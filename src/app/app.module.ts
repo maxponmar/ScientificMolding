@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -17,11 +15,14 @@ import { GateSealComponent } from './components/mainmenu/gate-seal/gate-seal.com
 import { CoolingTimeComponent } from './components/mainmenu/cooling-time/cooling-time.component';
 import { HomeComponent } from './components/mainmenu/home/home.component';
 
+import { HotTableModule } from '@handsontable/angular';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,    
+    FooterComponent,
     NavbarComponent,
     SidebarComponent,
     CavityBalanceComponent,
@@ -35,10 +36,12 @@ import { HomeComponent } from './components/mainmenu/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
+    HotTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+// platformBrowserDynamic().bootstrapModule(AppModule).catch(err => { console.error(err) });
