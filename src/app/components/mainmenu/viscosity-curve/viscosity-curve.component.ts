@@ -14,7 +14,7 @@ export class ViscosityCurveComponent implements OnInit {
   isOpen = false;
   isLight = true;
 
-  @ViewChild("hot") hot: HotTableComponent;
+  @ViewChild("hot") hot: HotTableComponent | any;
 
   dataset: any[] = [
     {InjectionSpeed: 0.3, FillTime: 12.17, InjectionPressure: 2635, PlasticPressure: 0, ShearRate: 0, Viscosity: 0, percentageVariation: 0},

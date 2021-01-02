@@ -19,6 +19,7 @@ span {
   left: 0;
   z-index: 101;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px 1px;
+  z-index: 1000;  
 }
 
 .navbar-nav {
@@ -63,6 +64,10 @@ span {
 
 /* Extra small devices <= 600px */
 @media only screen and (max-width: 600px) {
+  .navbar{
+    font-size: 10px;
+  }
+  
 	.nav-right .nav-item {
 		display: none;
 	}

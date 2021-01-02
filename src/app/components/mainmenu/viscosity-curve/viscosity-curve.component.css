@@ -92,15 +92,6 @@ input[type=number] {
   width: 100px;
 }
 
-.button-success{
-  border-style: none;
-  background-color: var(--success-color);
-  color: white;
-  font-size: large;
-}
-
-
-
 button {
   background-color: var(--warning-color);
   border: none;
@@ -116,10 +107,20 @@ button {
   cursor: pointer;
 }
 
+.button-success{
+  border-style: none;
+  background-color: var(--success-color);
+  color: white;
+  font-size: large;
+}
+
 .danger{
   background-color: var(--danger-color);
 }
 
+.handsontable th {
+  z-index: -1000;
+}
 
 /* Extra small devices <= 600px */
 @media only screen and (max-width: 600px) {
