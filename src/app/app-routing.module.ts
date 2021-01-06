@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CavityBalanceComponent } from './components/mainmenu/cavity-balance/cavity-balance.component';
-import { CoolingTimeComponent } from './components/mainmenu/cooling-time/cooling-time.component';
-import { CosmeticProcessWindowComponent } from './components/mainmenu/cosmetic-process-window/cosmetic-process-window.component';
-import { GateSealComponent } from './components/mainmenu/gate-seal/gate-seal.component';
-import { HomeComponent } from './components/mainmenu/home/home.component';
-import { PressureDropComponent } from './components/mainmenu/pressure-drop/pressure-drop.component';
-import { ViscosityCurveComponent } from './components/mainmenu/viscosity-curve/viscosity-curve.component';
+import { CavityBalanceComponent } from './components/cavity-balance/cavity-balance.component';
+import { CoolingTimeComponent } from './components/cooling-time/cooling-time.component';
+import { CosmeticProcessWindowComponent } from './components/cosmetic-process-window/cosmetic-process-window.component';
+import { GateSealComponent } from './components/gate-seal/gate-seal.component';
+import { HomeComponent } from './components/home/home.component';
+import { PressureDropComponent } from './components/pressure-drop/pressure-drop.component';
+import { ViscosityCurveComponent } from './components/viscosity-curve/viscosity-curve.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
