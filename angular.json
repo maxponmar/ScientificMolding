@@ -30,10 +30,12 @@
             "styles": [
               "src/styles.css",
               "src/assets/fontawesome-free/css/all.min.css",
-              "node_modules/handsontable/dist/handsontable.full.min.css"
+              "node_modules/handsontable/dist/handsontable.full.min.css",
+              "src/assets/bootstrap/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/handsontable/dist/handsontable.full.min.js"
+              "node_modules/handsontable/dist/handsontable.full.min.js",
+              "src/assets/bootstrap/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
