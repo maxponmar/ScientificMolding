@@ -14,6 +14,7 @@ import { CosmeticProcessWindowComponent } from './components/cosmetic-process-wi
 import { GateSealComponent } from './components/gate-seal/gate-seal.component';
 import { CoolingTimeComponent } from './components/cooling-time/cooling-time.component';
 import { HomeComponent } from './components/home/home.component';
+import { StudyTitleComponent } from './components/shared/study-title/study-title.component';
 
 
 
@@ -28,7 +29,8 @@ import { HomeComponent } from './components/home/home.component';
     CosmeticProcessWindowComponent,
     GateSealComponent,
     CoolingTimeComponent,
-    HomeComponent
+    HomeComponent,
+    StudyTitleComponent
   ],
   imports: [
     BrowserModule,
