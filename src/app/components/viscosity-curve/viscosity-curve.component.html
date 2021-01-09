@@ -1,1 +1,65 @@
 <app-study-title name="Viscosity Curve"></app-study-title>
+
+<div class="mb-3">
+  <label for="intensificationRatio" class="form-label">
+    <i class="fas fa-arrow-up"></i> Intensification Ratio</label
+  >
+  <input
+    type="number"
+    step="any"
+    class="form-control"
+    id="intensificationRatio"
+    placeholder="0"
+  />
+</div>
+
+<div class="mb-3">
+  <h4>Input Data</h4>
+  <div class="wrapper">
+    <hot-table
+      licenseKey="non-commercial-and-evaluation"
+      [colHeaders]="true"
+      [rowHeaders]="true"
+      [contextMenu]="true"
+      [data]="dataset"
+      #hot
+    >
+      <hot-column data="InjectionSpeed" title="Injection Speed"></hot-column>
+      <hot-column data="FillTime" title="Fill Time"></hot-column>
+      <hot-column
+        data="InjectionPressure"
+        title="Injection Pressure"
+      ></hot-column>
+      <hot-column
+        data="PlasticPressure"
+        [readOnly]="true"
+        title="Plastic Pressure"
+      ></hot-column>
+      <hot-column
+        data="ShearRate"
+        [readOnly]="true"
+        title="Shear Rate"
+      ></hot-column>
+      <hot-column
+        data="Viscosity"
+        [readOnly]="true"
+        title="Viscosity"
+      ></hot-column>
+      <hot-column
+        data="percentageVariation"
+        [readOnly]="true"
+        title="%Variation"
+      ></hot-column>
+    </hot-table>
+  </div>
+</div>
+
+<div class="mb-3">
+  <div class="d-grid gap-2">
+    <button type="button" class="btn btn-success">Calculate</button>
+  </div>
+</div>
+
+<div class="mb-3">
+  <canvas id="myChart"></canvas>
+</div>

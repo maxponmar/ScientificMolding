@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HotTableModule } from '@handsontable/angular';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +17,6 @@ import { CoolingTimeComponent } from './components/cooling-time/cooling-time.com
 import { HomeComponent } from './components/home/home.component';
 import { StudyTitleComponent } from './components/shared/study-title/study-title.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +29,10 @@ import { StudyTitleComponent } from './components/shared/study-title/study-title
     GateSealComponent,
     CoolingTimeComponent,
     HomeComponent,
-    StudyTitleComponent
+    StudyTitleComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HotTableModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HotTableModule, ChartsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

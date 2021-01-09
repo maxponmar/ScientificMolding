@@ -1,0 +1,9 @@
+.handsontable th {
+  z-index: -1000;
+}
+
+.wrapper {
+  display: flex;
+  overflow-x: auto;
+  height: 50vh;
+}
