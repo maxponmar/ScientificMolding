@@ -2,13 +2,14 @@
 
 <div class="mb-3">
   <label for="intensificationRatio" class="form-label">
-    <i class="fas fa-arrow-up"></i> Intensification Ratio</label
+    <i class="fas fa-arrow-up"></i>Intensification Ratio</label
   >
   <input
     type="number"
     step="any"
     class="form-control"
-    placeholder="0"
+    value="11.45"
+    required
     #intensificationRatio
   />
 </div>
@@ -88,7 +89,7 @@
 </div>
 
 <div class="mb-3">
-  <div style="display: block">
+  <div class="chart-container">
     <canvas
       baseChart
       width="400"
