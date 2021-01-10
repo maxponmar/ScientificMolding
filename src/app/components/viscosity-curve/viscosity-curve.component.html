@@ -8,13 +8,34 @@
     type="number"
     step="any"
     class="form-control"
-    id="intensificationRatio"
     placeholder="0"
+    #intensificationRatio
   />
 </div>
 
 <div class="mb-3">
   <h4>Input Data</h4>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <span class="input-group-text">No. Rows</span>
+    </div>
+    <input type="number" class="form-control" placeholder="10" #noRows />
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="addRows(+noRows.value)"
+    >
+      Add Rows
+    </button>
+  </div>
+  <div class="btn-group mx-2 mb-2" role="rows-group">
+    <button type="button" class="btn btn-primary" (click)="addRow()">
+      Add Row
+    </button>
+    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
+      Delete All Rows
+    </button>
+  </div>
   <div class="wrapper">
     <hot-table
       licenseKey="non-commercial-and-evaluation"
@@ -56,10 +77,28 @@
 
 <div class="mb-3">
   <div class="d-grid gap-2">
-    <button type="button" class="btn btn-success">Calculate</button>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="calculate(+intensificationRatio.value)"
+    >
+      Calculate
+    </button>
   </div>
 </div>
 
 <div class="mb-3">
-  <canvas id="myChart"></canvas>
+  <div style="display: block">
+    <canvas
+      baseChart
+      width="400"
+      height="400"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+    ></canvas>
+  </div>
 </div>
