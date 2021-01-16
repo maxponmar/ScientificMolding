@@ -200,6 +200,11 @@ export class ViscosityCurveComponent implements OnInit {
     this.hot.updateHotTable({ data: this.dataset });
   }
 
+  deleteLastRow() {
+    this.dataset.splice(-1, 1);
+    this.hot.updateHotTable({ data: this.dataset });
+  }
+
   deleteAllRows() {
     this.dataset = [
       {

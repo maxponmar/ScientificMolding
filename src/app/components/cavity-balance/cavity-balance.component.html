@@ -14,20 +14,23 @@
     >
       Add Rows
     </button>
+    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
+      Delete All Rows
+    </button>
   </div>
   <div class="btn-group mx-2 mb-2" role="rows-group">
     <button type="button" class="btn btn-primary" (click)="addRow()">
       Add Row
     </button>
-    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
-      Delete All Rows
+    <button type="button" class="btn btn-danger" (click)="deleteLastRow()">
+      Delete Last Row
     </button>
   </div>
   <div class="btn-group mx-2 mb-2" role="cols-group">
-    <button type="button" class="btn btn-primary" (click)="addRow()">
+    <button type="button" class="btn btn-primary" (click)="addColumn()">
       Add New Column
     </button>
-    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
+    <button type="button" class="btn btn-danger" (click)="deleteColumn()">
       Delete Column
     </button>
   </div>
@@ -37,11 +40,13 @@
       [colHeaders]="true"
       [rowHeaders]="true"
       [contextMenu]="true"
+      [data]="dataset"
       #hot
     >
       <hot-column data="weight1" title="Weight 1"></hot-column>
       <hot-column data="weight2" title="Weight 2"></hot-column>
       <hot-column data="weight3" title="Weight 3"></hot-column>
+      <!-- <hot-column data="weight4" title="Weight 4"></hot-column> -->
     </hot-table>
   </div>
 </div>
@@ -56,7 +61,7 @@
 
 <div class="mb-3">
   <div class="chart-container">
-    <!-- <canvas
+    <canvas
       baseChart
       width="400"
       height="400"
@@ -66,6 +71,6 @@
       [colors]="lineChartColors"
       [legend]="lineChartLegend"
       [chartType]="lineChartType"
-    ></canvas> -->
+    ></canvas>
   </div>
 </div>

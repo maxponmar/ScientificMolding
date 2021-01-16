@@ -28,13 +28,16 @@
     >
       Add Rows
     </button>
+    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
+      Delete All Rows
+    </button>
   </div>
   <div class="btn-group mx-2 mb-2" role="rows-group">
     <button type="button" class="btn btn-primary" (click)="addRow()">
       Add Row
     </button>
-    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
-      Delete All Rows
+    <button type="button" class="btn btn-danger" (click)="deleteLastRow()">
+      Delete Last Row
     </button>
   </div>
   <div class="wrapper">
