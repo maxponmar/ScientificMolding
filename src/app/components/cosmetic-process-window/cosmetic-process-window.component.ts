@@ -18,6 +18,8 @@ export class CosmeticProcessWindowComponent implements OnInit {
   public optimalTemperature: number = 400;
   public optimalPressure: number = 950;
 
+  public graphed: boolean = false;
+
   dataset: any[] = [
     { meltMoldTemp: 390, lowProcess: 800, highProcess: 1200 },
     { meltMoldTemp: 410, lowProcess: 700, highProcess: 1100 },
@@ -27,24 +29,24 @@ export class CosmeticProcessWindowComponent implements OnInit {
     {
       data: [
         {
-          x: this.dataset[0]['meltMoldTemp'],
-          y: this.dataset[0]['lowProcess'],
+          x: 0,
+          y: 0,
         },
         {
-          x: this.dataset[0]['meltMoldTemp'],
-          y: this.dataset[0]['highProcess'],
+          x: 0,
+          y: 0,
         },
         {
-          x: this.dataset[1]['meltMoldTemp'],
-          y: this.dataset[1]['highProcess'],
+          x: 0,
+          y: 0,
         },
         {
-          x: this.dataset[1]['meltMoldTemp'],
-          y: this.dataset[1]['lowProcess'],
+          x: 0,
+          y: 0,
         },
         {
-          x: this.dataset[0]['meltMoldTemp'],
-          y: this.dataset[0]['lowProcess'],
+          x: 0,
+          y: 0,
         },
       ],
       borderColor: 'black',
@@ -61,16 +63,8 @@ export class CosmeticProcessWindowComponent implements OnInit {
     {
       data: [
         {
-          x:
-            (this.dataset[0]['meltMoldTemp'] +
-              this.dataset[1]['meltMoldTemp']) /
-            2,
-          y:
-            (this.dataset[0]['lowProcess'] +
-              this.dataset[1]['lowProcess'] +
-              this.dataset[0]['highProcess'] +
-              this.dataset[1]['highProcess']) /
-            4,
+          x: 0,
+          y: 0,
         },
       ],
       pointBackgroundColor: 'orange',
@@ -158,5 +152,6 @@ export class CosmeticProcessWindowComponent implements OnInit {
       },
     ];
     this.chart.update();
+    this.graphed = true;
   }
 }

@@ -15,11 +15,10 @@ export class CavityBalanceComponent implements OnInit {
   private noColumns: number = 3;
 
   dataset: any[] = [
-    { weight1: 0, weight2: 0, weight3: 0 },
-    { weight1: 0, weight2: 0, weight3: 0 },
-    { weight1: 0, weight2: 0, weight3: 0 },
-    { weight1: 0, weight2: 0, weight3: 0 },
-    { weight1: 0, weight2: 0, weight3: 0 },
+    { weight1: 0.752, weight2: 2.328, weight3: 7.154 },
+    { weight1: 0.77, weight2: 2.359, weight3: 7.368 },
+    { weight1: 0.734, weight2: 2.254, weight3: 7.598 },
+    { weight1: 0.725, weight2: 2.275, weight3: 7.836 },
   ];
 
   public lineChartData: ChartDataSets[] = [

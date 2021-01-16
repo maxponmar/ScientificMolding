@@ -24,7 +24,7 @@
       Graph
     </button>
   </div>
-  <div class="d-grid gap-2 mt-2">
+  <div class="d-grid gap-2 mt-2" *ngIf="this.graphed">
     <div class="alert alert-primary" role="alert">
       <p>Optimal melt temprature: {{ optimalTemperature }}&deg;</p>
       <p>Optimal holding pressure: {{ optimalPressure }}psi</p>
