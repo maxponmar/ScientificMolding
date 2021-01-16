@@ -1,6 +1,20 @@
 <app-study-title name="Pressure Drop"></app-study-title>
 
 <div class="mb-3">
+  <label for="intensificationRatio" class="form-label">
+    <i class="fas fa-arrow-up"></i> Max. Avialable Pressure</label
+  >
+  <input
+    type="number"
+    step="any"
+    class="form-control"
+    value="3000"
+    required
+    #availablePressure
+  />
+</div>
+
+<div class="mb-3">
   <h4>Input Data</h4>
   <div class="input-group mb-2">
     <div class="input-group-prepend">
@@ -14,7 +28,7 @@
     >
       Add Rows
     </button>
-    <button type="button" class="btn btn-danger" (click)="deleteAllRows()" >
+    <button type="button" class="btn btn-danger" (click)="deleteAllRows()">
       Delete All Rows
     </button>
   </div>
@@ -43,9 +57,32 @@
 
 <div class="mb-3">
   <div class="d-grid gap-2">
-    <button type="button" class="btn btn-success" (click)="graph()">
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="graph(+availablePressure.value)"
+    >
       Graph
     </button>
+  </div>
+  <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="!this.validPressure && this.graphed"
+  >
+    The 90% of {{ availablePressure.value }}psi is
+    {{ this.ninetyPercentPressure }}psi but the proccess pressure needs
+    {{ this.processMaxPressure }}psi. Troubleshoot the process or use another
+    machine.
+  </div>
+  <div
+    class="alert alert-success"
+    role="alert"
+    *ngIf="this.validPressure && this.graphed"
+  >
+    The 90% of {{ availablePressure.value }}psi is
+    {{ this.ninetyPercentPressure }}psi and the proccess pressure needs
+    {{ this.processMaxPressure }}psi. This machine fits the process.
   </div>
 </div>
 

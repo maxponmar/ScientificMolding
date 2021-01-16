@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { HotColumnComponent, HotTableComponent } from '@handsontable/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HotTableComponent } from '@handsontable/angular';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 
@@ -11,6 +11,11 @@ import { Color, Label } from 'ng2-charts';
 export class PressureDropComponent implements OnInit {
   @ViewChild('hot', { static: false })
   hot!: HotTableComponent;
+
+  public graphed: boolean = false;
+  public validPressure: boolean = true;
+  public ninetyPercentPressure: number = 0;
+  public processMaxPressure: number = 0;
 
   dataset: any[] = [
     { section: 'Nozzle', pressure: 2000 },
@@ -88,7 +93,11 @@ export class PressureDropComponent implements OnInit {
     this.hot.updateHotTable({ data: this.dataset });
   }
 
-  graph() {
+  graph(maxPressure: number) {
+    this.ninetyPercentPressure = maxPressure * 0.9;
+    this.processMaxPressure = this.dataset[this.dataset.length - 1]['pressure'];
+    this.validPressure = this.processMaxPressure < this.ninetyPercentPressure;
+    this.graphed = true;
     this.lineChartLabels = this.dataset.map((value) => value['section']);
     this.lineChartData[0].data = this.dataset.map(
       (value) => +value['pressure']
