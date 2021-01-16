@@ -1,0 +1,7 @@
+.chart-container {
+  display: block;
+  margin: auto;
+  padding: 0;
+  max-height: 40rem;
+  max-width: 40rem;
+}

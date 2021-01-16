@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { HotColumnComponent, HotTableComponent } from '@handsontable/angular';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
-import { title } from 'process';
 
 @Component({
   selector: 'app-cavity-balance',
@@ -199,14 +198,5 @@ export class CavityBalanceComponent implements OnInit {
       index++;
       this.lineChartLabels.push(String(index));
     });
-
-    // this.lineChartData = [
-    //   { data: [1, 1, 1], label: 'Weight 1' },
-    //   { data: [2, 3, 2], label: 'Weight 2' },
-    //   { data: [5, 6, 6], label: 'Weight 3' },
-    //   { data: [11, 10, 9], label: 'Weight 4' },
-    //   { data: [13, 15, 14], label: 'Weight 5' }, // Wight X, X = No. of Cols
-    // ];
-    // this.lineChartLabels = ['1', '2', '3']; // No. of Rows
   }
 }
