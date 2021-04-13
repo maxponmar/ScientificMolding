@@ -1,0 +1,40 @@
+:root {
+  --color-primary-text: #161d6f;
+
+
+  --color-primary: #19456b;
+  --color-primary-light: #487e95;
+  --color-secondary: #719fb0;
+  --color-white: #eeeeee;
+  --color-black: #23120b;
+  --color-grey: #d9dab0;
+  --color-grey-light: #e2e2e2;
+  --color-icons: #e2e2e2;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: var(--color-white);
+}
+
+body {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
