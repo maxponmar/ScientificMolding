@@ -1,6 +1,9 @@
 .header {
+  z-index: 1000;
+  grid-area: header;
+  height: 4rem;
   text-align: center;
-  background-color: #222831;
+  background-color: var(--background-color);
   color: #dddddd;
 
   span {

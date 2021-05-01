@@ -1,4 +1,7 @@
 .home {
+  height: 90vh;
+  width: 100%;
+  grid-area: main;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;

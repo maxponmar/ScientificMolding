@@ -1,8 +1,7 @@
 :root {
   --color-primary-text: #161d6f;
 
-
-  --color-primary: #19456b;
+  --color-primary: #f05454;
   --color-primary-light: #487e95;
   --color-secondary: #719fb0;
   --color-white: #eeeeee;
@@ -10,6 +9,8 @@
   --color-grey: #d9dab0;
   --color-grey-light: #e2e2e2;
   --color-icons: #e2e2e2;
+  --background-color: #222831;
+  --background-color-light: #bdc7c9;
 }
 
 *,
@@ -29,6 +30,7 @@ html {
 body {
   box-sizing: border-box;
   margin: auto;
+  background-color: var(--background-color-light);
 }
 
 ul {
