@@ -1,6 +1,6 @@
 @import "/src/Sass/abstracts.scss";
 
-.sidebar {
+.sidebar:not(.home) {
   z-index: 1000;
   grid-area: sidebar;
   margin: 0;
@@ -42,5 +42,15 @@
       background-color: var(--color-primary);
       color: white;
     }
+  }
+
+  &__home {
+    display: flex;
+    width: 80%;
+    color: #000;
+  }
+
+  &__toggler {
+    display: flex;
   }
 }
