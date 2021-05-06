@@ -1,17 +1,24 @@
 @import "/src/Sass/abstracts.scss";
 
-.sidebar:not(.home) {
+.sidebar {
   z-index: 1000;
   grid-area: sidebar;
   margin: 0;
   padding: 0;
   width: 100%;
-  // width: 0;
-  // display: none;
   background-color: var(--color-grey-light);
-  // position: fixed;
   height: 100%;
   overflow: auto;
+
+  &--showed {
+    widh: 100%;
+    display: block;
+  }
+
+  &--hidden {
+    width: 0;
+    display: none;
+  }
 
   button {
     display: block;
@@ -44,13 +51,11 @@
     }
   }
 
-  &__home {
-    display: flex;
-    width: 80%;
-    color: #000;
-  }
-
   &__toggler {
-    display: flex;
+    position: fixed;
+    width: 3rem;
+    cursor: pointer;
+    top: 5rem;
+    left: 210px;
   }
 }
