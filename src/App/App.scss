@@ -4,12 +4,5 @@
     "header"
     "main"
     "footer";
-}
-
-.show-sidebar {
-  grid-template-areas:
-    "header header header header"
-    "sidebar main main main"
-    "footer footer footer footer";
-  grid-template-columns: 250px auto;
+  position: relative;
 }
