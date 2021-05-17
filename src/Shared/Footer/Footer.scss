@@ -1,8 +1,9 @@
 @import "/src/Sass/abstracts.scss";
 
 .footer {
-  z-index: 1000;
-  grid-area: footer;
+  position: fixed;
+  bottom: 0;
+  z-index: 2000;
   width: 100%;
   background-color: var(--background-color);
   color: var(--color-white);

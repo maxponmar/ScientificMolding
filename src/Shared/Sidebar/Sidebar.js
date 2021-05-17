@@ -24,7 +24,8 @@ const Sidebar = () => {
       >
         <img src={chevronIcon} />
       </div>
-      <button className="active">Home</button>
+      {/* <button className="active">Home</button> */}
+      <button className="home-btn active">Home</button>
       <button>Viscosity Curve</button>
       <button>Cavity Balance</button>
       <button>Pressure Drop</button>

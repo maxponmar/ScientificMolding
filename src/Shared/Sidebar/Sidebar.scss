@@ -1,23 +1,22 @@
 @import "/src/Sass/abstracts.scss";
 
 .sidebar {
+  position: fixed;
   z-index: 1000;
   margin-top: 4rem;
   padding: 0;
   background-color: var(--color-grey-light);
   height: 90%;
   overflow: auto;
-  position: absolute;
 
   &--showed {
     widh: 250px;
-    display: inline;
   }
 
   &--hidden {
     width: 50px;
-    &::after{
-      content:"";
+    &::after {
+      content: "";
     }
   }
 
@@ -51,11 +50,10 @@
       color: white;
     }
   }
-
   &__toggler {
     position: absolute;
-    width: 3rem;
     cursor: pointer;
+    width: 3rem;
     top: 1.4rem;
 
     &--showed {
@@ -66,4 +64,9 @@
       left: 15px;
     }
   }
+}
+
+.home-btn {
+  display: float;
+  width: 100px;
 }

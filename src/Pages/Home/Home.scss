@@ -1,14 +1,14 @@
 .home {
-  height: 90vh;
+  height: 140vh;
   width: 100%;
-  grid-area: main;
+  margin-top: 4rem;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   text-align: center;
 
   &--title {
-    margin-top: 10rem;
+    // margin-top: 10rem;
     font-size: 3rem;
   }
 
