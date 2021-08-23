@@ -2,21 +2,29 @@
 
 .sidebar {
   position: fixed;
-  z-index: 1000;
+  height: 90%;
+  z-index: 10;
   margin-top: 4rem;
   padding: 0;
   background-color: var(--color-grey-light);
-  height: 90%;
   overflow: auto;
+  transition: all 0.3s;
 
   &--showed {
-    widh: 250px;
+    width: 180px;
   }
 
   &--hidden {
     width: 50px;
     &::after {
       content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: var(--background-color-light);
     }
   }
 
@@ -33,6 +41,7 @@
     font-size: 100%;
     font-family: inherit;
     cursor: pointer;
+    z-index: 1000;
 
     @include respond-max(400px) {
       text-align: center;
@@ -58,10 +67,13 @@
 
     &--showed {
       left: 130px;
+      transform: rotate(0deg);
     }
 
     &--hidden {
       left: 15px;
+      z-index: 1000;
+      transform: rotate(180deg);
     }
   }
 }
