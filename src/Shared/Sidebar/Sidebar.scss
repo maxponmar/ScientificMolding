@@ -48,17 +48,19 @@
       float: none;
     }
 
-    &.active {
-      background-color: var(--color-primary-light);
-      color: white;
-      cursor: default;
-    }
-
     &:hover:not(.active) {
       background-color: var(--color-primary);
       color: white;
     }
   }
+  .active {
+    button {
+      background-color: var(--color-secondary);
+      color: white;
+      cursor: default;
+    }
+  }
+
   &__toggler {
     position: absolute;
     cursor: pointer;

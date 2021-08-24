@@ -1,4 +1,5 @@
 import "./App.scss";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Header from "../Shared/Header/Header";
 import Sidebar from "../Shared/Sidebar/Sidebar";
@@ -6,15 +7,21 @@ import Home from "../Pages/Home/Home";
 import Footer from "../Shared/Footer/Footer";
 
 import ThemeContext from "../Store/ThemeContext";
+import About from "../Pages/About/About";
 
 function App() {
   return (
     <ThemeContext.Provider value={{ isDark: true }}>
       <div className="App">
-        <Header />
-        <Sidebar />
-        <Home />
-        <Footer name="Scientific Molding Tools" />
+        <Router>
+          <Header />
+          <Sidebar />
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" component={Home} />
+          </Switch>
+          <Footer name="Scientific Molding Tools" />
+        </Router>
       </div>
     </ThemeContext.Provider>
   );

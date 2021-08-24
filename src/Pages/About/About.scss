@@ -1,0 +1,20 @@
+.About {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &--title {
+    font-size: 3rem;
+  }
+
+  &--subtitle {
+    font-size: 2rem;
+  }
+
+  &--link {
+    img {
+      height: 4rem;
+    }
+  }
+}

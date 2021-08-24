@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Sidebar.scss";
 import chevronIcon from "../../Assets/SVG/bxs-chevron-left-circle.svg";
@@ -25,13 +26,30 @@ const Sidebar = () => {
         <img src={chevronIcon} />
       </div>
       {/* <button className="active">Home</button> */}
-      <button className="home-btn active">Home</button>
-      <button>Viscosity Curve</button>
-      <button>Cavity Balance</button>
-      <button>Pressure Drop</button>
-      <button>Cosmetic Process Window</button>
-      <button>Gate Seal</button>
-      <button>Cooling Time</button>
+      <NavLink activeClassName="" to="/">
+        <button>Home</button>
+      </NavLink>
+      <NavLink to="/viscositycurve">
+        <button>Viscosity Curve</button>
+      </NavLink>
+      <NavLink to="/cavitybalance">
+        <button>Cavity Balance</button>
+      </NavLink>
+      <NavLink to="/pressuredrop">
+        <button>Pressure Drop</button>
+      </NavLink>
+      <NavLink to="/cosmeticprocesswindow">
+        <button>Cosmetic Process Window</button>
+      </NavLink>
+      <NavLink to="/gateseal">
+        <button>Gate Seal</button>
+      </NavLink>
+      <NavLink to="/coolingtime">
+        <button>Cooling Time</button>
+      </NavLink>
+      <NavLink to="/about">
+        <button>About</button>
+      </NavLink>
     </div>
   );
 };
