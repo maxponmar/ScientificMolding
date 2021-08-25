@@ -1,13 +1,26 @@
 @font-face {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: normal;
-  src: local('Poppins'), url('../Assets/Fonts/Poppins-Regular.woff') format('woff');
+  src: local("Poppins"),
+    url("../Assets/Fonts/Poppins-Regular.woff") format("woff");
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Poppins"), url("../Assets/Fonts/Poppins-Bold.woff") format("woff");
+  font-display: swap;
+}
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   line-height: 1.7;
+}
+
+.study-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-black);
 }
