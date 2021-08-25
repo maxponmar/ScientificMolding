@@ -1,8 +1,13 @@
+@import "/src/Sass/animations.scss";
+
 .About {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: fadeDownAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
   &--title {
     font-size: 3rem;

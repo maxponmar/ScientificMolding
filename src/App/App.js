@@ -8,6 +8,7 @@ import Footer from "../Shared/Footer/Footer";
 
 import ThemeContext from "../Store/ThemeContext";
 import About from "../Pages/About/About";
+import ViscosityCurve from "../Pages/ViscosityCurve/ViscosityCurve";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Header />
           <Sidebar />
           <Switch>
+            <Route path="/viscositycurve" component={ViscosityCurve} />
             <Route path="/about" component={About} />
             <Route path="/" component={Home} />
           </Switch>

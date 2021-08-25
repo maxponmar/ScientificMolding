@@ -8,3 +8,15 @@
     opacity: 1;
   }
 }
+
+@keyframes fadeDownAnimation {
+  from {
+    opacity: 0.3;
+    transform: translate(-50%, -150%);
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

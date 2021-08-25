@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./Sidebar.scss";
 import chevronIcon from "../../Assets/SVG/bxs-chevron-left-circle.svg";
 
-const Sidebar = () => {
+function Sidebar() {
   const [isHidden, setIsHidden] = useState(false);
   const toggleSidebar = () => {
     setIsHidden(!isHidden);
@@ -52,6 +52,6 @@ const Sidebar = () => {
       </NavLink>
     </div>
   );
-};
+}
 
 export default Sidebar;

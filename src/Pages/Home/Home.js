@@ -1,7 +1,7 @@
 import "./Home.scss";
 import moldingMachineIcon from "../../Assets/Images/MoldingMachine.svg";
 
-const Home = () => {
+function Home() {
   return (
     <div className="home">
       <h2 className="home--title">Welcome</h2>
@@ -12,6 +12,6 @@ const Home = () => {
       />
     </div>
   );
-};
+}
 
 export default Home;
