@@ -1,17 +1,23 @@
+@import '/src/Sass/abstracts.scss';
+
 .viscositycurve {
   padding-top: 5rem;
   margin-left: 3rem;
   text-align: center;
 
   &__study {
+    font-size: 2rem;
 
     &-label {
-      font-size: 2rem;
       padding: 0 1rem;
     }
 
     &-input {
       display: inline-block;
+
+      @include respond-max(320px) {
+        width: 77%;
+      }
     }
   }
 }

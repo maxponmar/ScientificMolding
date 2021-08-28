@@ -7,26 +7,7 @@
   margin-top: 4rem;
   background-color: var(--color-grey-light);
   overflow: auto;
-  transition: all 0.3s;
-
-  &--showed {
-    width: 180px;
-  }
-
-  &--hidden {
-    width: 50px;
-
-    &::after {
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      background-color: var(--background-color-light);
-    }
-  }
+  transition: all 1s;
 
   button {
     display: block;
@@ -55,6 +36,28 @@
     }
   }
 
+  &--showed {
+    width: 180px;
+  }
+
+  &--hidden {
+    width: 25px;
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: var(--background-color-light);
+    }
+
+  }
+
+
+
   .active {
     button {
       background-color: var(--color-secondary);
@@ -66,8 +69,11 @@
   &__toggler {
     position: absolute;
     cursor: pointer;
-    width: 3rem;
+    width: 2rem;
+    padding: 0;
+    margin: 0;
     top: 1.4rem;
+    transition: all 0.3s;
 
     &--showed {
       left: 130px;
@@ -75,7 +81,7 @@
     }
 
     &--hidden {
-      left: 15px;
+      left: 5px;
       z-index: 1000;
       transform: rotate(180deg);
     }
