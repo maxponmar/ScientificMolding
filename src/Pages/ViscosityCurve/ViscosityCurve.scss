@@ -1,23 +1,50 @@
-@import '/src/Sass/abstracts.scss';
+@import "/src/Sass/abstracts.scss";
 
 .viscositycurve {
   padding-top: 5rem;
   margin-left: 3rem;
   text-align: center;
 
-  &__study {
+  &__form {
     font-size: 2rem;
 
-    &-label {
-      padding: 0 1rem;
+    &--intensificationratio {
+      &-label {
+        padding: 0 1rem;
+      }
+
+      &-input {
+        display: inline-block;
+
+        @include respond-max(320px) {
+          width: 80%;
+        }
+      }
     }
 
-    &-input {
-      display: inline-block;
+    &--inputgroup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1rem;
+      height: 4rem;
 
-      @include respond-max(320px) {
-        width: 77%;
+      span {
+        font-size: 1.5rem;
       }
+
+      input {
+        width: 7.5rem;
+      }
+
+      @include respond-max(450px) {
+        display: inline-block;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &--talbe {
+      margin-top: 10px;
     }
   }
 }

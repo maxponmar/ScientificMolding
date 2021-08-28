@@ -3,7 +3,7 @@
 .sidebar {
   position: fixed;
   height: 90%;
-  z-index: 10;
+  z-index: 10000;
   margin-top: 4rem;
   background-color: var(--color-grey-light);
   overflow: auto;
@@ -53,10 +53,7 @@
       z-index: 10;
       background-color: var(--background-color-light);
     }
-
   }
-
-
 
   .active {
     button {
