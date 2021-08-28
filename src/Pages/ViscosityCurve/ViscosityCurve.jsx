@@ -9,13 +9,14 @@ function ViscosityCurve() {
   };
 
   return (
-    <div className="Viscositycurve">
+    <div className="viscositycurve">
       <h2 className="study-title">Viscosity Curve</h2>
       <div>
-        <form>
+        <form className='viscositycurve__study'>
           <div>
-            <label>Intensification Ratio</label>
+            <label className='viscositycurve__study-label' >Intensification Ratio</label>
             <input
+              className='viscositycurve__study-input'
               type="text"
               value={intensificationRatio}
               onChange={handleIntensificationRatioChange}

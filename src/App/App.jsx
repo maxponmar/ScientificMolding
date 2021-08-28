@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "../Shared/Header/Header";
 import Sidebar from "../Shared/Sidebar/Sidebar";

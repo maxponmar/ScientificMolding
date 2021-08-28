@@ -40,3 +40,10 @@ ul {
 a {
   text-decoration: none;
 }
+
+input {
+  border-radius: 50px;
+  border-style: none;
+  font-size: 2rem;
+  padding: 0 10px;
+}

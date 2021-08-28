@@ -23,7 +23,7 @@ function Sidebar() {
         }
         onClick={() => toggleSidebar()}
       >
-        <img src={chevronIcon} />
+        <img src={chevronIcon} alt='Chevron Icon'/>
       </div>
       {/* <button className="active">Home</button> */}
       <NavLink activeClassName="" to="/">

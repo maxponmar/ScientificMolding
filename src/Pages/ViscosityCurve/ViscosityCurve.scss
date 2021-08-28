@@ -1,5 +1,17 @@
-.Viscositycurve {
+.viscositycurve {
   padding-top: 5rem;
-  // padding-left: 20rem;
+  margin-left: 3rem;
   text-align: center;
+
+  &__study {
+
+    &-label {
+      font-size: 2rem;
+      padding: 0 1rem;
+    }
+
+    &-input {
+      display: inline-block;
+    }
+  }
 }

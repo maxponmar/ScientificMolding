@@ -5,7 +5,6 @@
   height: 90%;
   z-index: 10;
   margin-top: 4rem;
-  padding: 0;
   background-color: var(--color-grey-light);
   overflow: auto;
   transition: all 0.3s;
@@ -16,6 +15,7 @@
 
   &--hidden {
     width: 50px;
+
     &::after {
       content: "";
       height: 100%;
@@ -54,6 +54,7 @@
       color: white;
     }
   }
+
   .active {
     button {
       background-color: var(--color-secondary);
