@@ -2,7 +2,7 @@
 
 .viscositycurve {
   padding-top: 5rem;
-  margin-left: 3rem;
+  margin-left: 4rem;
   text-align: center;
 
   &__form {
@@ -42,9 +42,21 @@
         margin-bottom: 4rem;
       }
     }
+  }
 
-    &--talbe {
-      margin-top: 10px;
-    }
+  &__table {
+    margin-top: 10px;
+  }
+
+  &__chart {
+    display: block;
+    // margin: 30rem 50rem;
+    padding: 0;
+    max-height: 40rem;
+    max-width: 40rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

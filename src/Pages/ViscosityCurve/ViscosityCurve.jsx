@@ -2,9 +2,8 @@ import "./ViscosityCurve.scss";
 import "handsontable/dist/handsontable.min.css";
 import { useState } from "react";
 import { HotTable, HotColumn } from "@handsontable/react";
-import Handsontable from "handsontable";
+import { Line } from "react-chartjs-2";
 
-const hotData = Handsontable.helper.createSpreadsheetData(7, 10);
 var dataset = [
   {
     InjectionSpeed: 0.3,
@@ -98,6 +97,31 @@ var dataset = [
   },
 ];
 
+const data = {
+  labels: ["1", "2", "3", "4", "5", "6"],
+  datasets: [
+    {
+      label: "# of Votes",
+      data: [12, 19, 3, 5, 2, 3],
+      fill: false,
+      backgroundColor: "rgb(255, 99, 132)",
+      borderColor: "rgba(255, 99, 132, 0.2)",
+    },
+  ],
+};
+
+const options = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+      },
+    ],
+  },
+};
+
 var viscosityData = [0];
 var injectionSpeedData = [0];
 
@@ -178,6 +202,9 @@ function ViscosityCurve() {
             </div>
           </div>
         </form>
+        <div className="viscositycurve__chart">
+          <Line data={data} options={options} />
+        </div>
       </div>
     </div>
   );
