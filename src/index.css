@@ -73,6 +73,9 @@ input {
   background-color: #dc3545;
 }
 
+.btn-calculate {
+  background-color: #198754;
+}
 .handsontable th {
   z-index: -1000;
 }

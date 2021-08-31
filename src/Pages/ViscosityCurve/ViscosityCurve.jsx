@@ -97,12 +97,12 @@ var dataset = [
   },
 ];
 
-const data = {
-  labels: ["1", "2", "3", "4", "5", "6"],
+let chartData = {
+  labels: ["Viscosity"],
   datasets: [
     {
-      label: "# of Votes",
-      data: [12, 19, 3, 5, 2, 3],
+      label: "0",
+      data: [0, 0, 0, 0, 0],
       fill: false,
       backgroundColor: "rgb(255, 99, 132)",
       borderColor: "rgba(255, 99, 132, 0.2)",
@@ -122,14 +122,91 @@ const options = {
   },
 };
 
-var viscosityData = [0];
-var injectionSpeedData = [0];
+let viscosityData = [0];
+// var injectionSpeedData = [0];
 
 function ViscosityCurve() {
   const [intensificationRatio, setIntensificationRatio] = useState(0);
 
   const handleIntensificationRatioChange = (event) => {
     setIntensificationRatio(event.target.value);
+  };
+
+  const updateChart = () => {
+    viscosityData = dataset.map((element) => element["Viscosity"]);
+    // injectionSpeedData = dataset.map((element) => element["InjectionSpeed"]);
+    chartData = {
+      // labels: ["Viscosity"],
+      datasets: [
+        {
+          label: "Viscosity",
+          data: viscosityData,
+          fill: false,
+          backgroundColor: "rgb(255, 99, 132)",
+          borderColor: "rgba(255, 99, 132, 0.2)",
+        },
+      ],
+    };
+  };
+
+  const addRow = () => {
+    dataset.push({
+      InjectionSpeed: 0,
+      FillTime: 0,
+      InjectionPressure: 0,
+      PlasticPressure: 0,
+      ShearRate: 0,
+      Viscosity: 0,
+      percentageVariation: 0,
+    });
+  };
+
+  const addRows = (numberOfRows) => {
+    for (let index = 0; index < numberOfRows; index++) {
+      dataset.push({
+        InjectionSpeed: 0,
+        FillTime: 0,
+        InjectionPressure: 0,
+        PlasticPressure: 0,
+        ShearRate: 0,
+        Viscosity: 0,
+        percentageVariation: 0,
+      });
+    }
+  };
+
+  const deletLastRow = () => {
+    dataset.splice(-1, 1);
+  };
+
+  const deleteAlRows = () => {
+    dataset = [
+      {
+        InjectionSpeed: 0,
+        FillTime: 0,
+        InjectionPressure: 0,
+        PlasticPressure: 0,
+        ShearRate: 0,
+        Viscosity: 0,
+        percentageVariation: 0,
+      },
+    ];
+  };
+
+  const calculate = (e, intensificationRatio) => {
+    let previousViscosity = 0;
+    dataset.forEach((element) => {
+      element["PlasticPressure"] =
+        element["InjectionPressure"] * intensificationRatio;
+      element["ShearRate"] = 1 / element["FillTime"];
+      element["Viscosity"] = element["FillTime"] * element["PlasticPressure"];
+      element["percentageVariation"] =
+        (element["Viscosity"] - previousViscosity) / previousViscosity;
+      previousViscosity = element["Viscosity"];
+    });
+    updateChart();
+    e.preventDefault();
+    console.log(dataset);
   };
 
   return (
@@ -168,6 +245,15 @@ function ViscosityCurve() {
                 Delete Last Row
               </button>
             </div>
+            <button
+              className="btn btn-calculate"
+              onClick={(e) => {
+                calculate(e, intensificationRatio);
+              }}
+              type="button"
+            >
+              Calculate
+            </button>
             <div className="viscositycurve__table">
               <HotTable
                 licenseKey="non-commercial-and-evaluation"
@@ -203,7 +289,7 @@ function ViscosityCurve() {
           </div>
         </form>
         <div className="viscositycurve__chart">
-          <Line data={data} options={options} />
+          <Line data={chartData} options={options} />
         </div>
       </div>
     </div>
