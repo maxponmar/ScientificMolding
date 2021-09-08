@@ -2,8 +2,16 @@
 
 .viscositycurve {
   padding-top: 5rem;
-  margin-left: 4rem;
-  text-align: center;
+  margin-left: 20vh;
+  text-align: left;
+
+  @include respond-max(1000px) {
+    margin-left: 10vh;
+  }
+
+  @include respond-max(740px) {
+    margin-left: 5vh;
+  }
 
   &__form {
     font-size: 2rem;
@@ -24,10 +32,9 @@
 
     &--inputgroup {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: flex-start;
       margin: 0 1rem;
-      height: 4rem;
 
       span {
         font-size: 1.5rem;
@@ -36,21 +43,23 @@
       input {
         width: 7.5rem;
       }
-
-      @include respond-max(450px) {
-        display: inline-block;
-        margin-bottom: 4rem;
-      }
     }
   }
 
   &__table {
-    margin-top: 10px;
+    // overflow-x: auto;
+    height: 50vh;
+    margin: auto;
+    padding-left: 10rem;
+    @include respond-max(740px) {
+      margin: 0;
+      padding: 0;
+      margin-left: 1rem;
+    }
   }
 
   &__chart {
     display: block;
-    // margin: 30rem 50rem;
     padding: 0;
     max-height: 40rem;
     max-width: 40rem;

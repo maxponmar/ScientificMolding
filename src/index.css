@@ -74,6 +74,7 @@ input {
 }
 
 .btn-calculate {
+  margin: 2rem auto;
   background-color: #198754;
 }
 .handsontable th {
@@ -81,29 +82,29 @@ input {
 }
 
 .handsontable {
-  position: absolute;
-  left: 25%;
+  /* position: absolute; */
+  /* left: 25%; */
 }
 
 @media only screen and (max-width: 1500px) {
   .handsontable {
-    left: 20%;
+    /* left: 20%; */
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .handsontable {
-    left: 15%;
+    /* left: 15%; */
   }
 }
 
 @media only screen and (max-width: 1000px) {
   .handsontable {
-    left: 10%;
+    /* left: 10%; */
   }
 }
 @media only screen and (max-width: 450px) {
   .handsontable {
-    left: 0%;
+    /* left: 0%; */
   }
 }

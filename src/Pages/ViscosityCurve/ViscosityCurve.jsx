@@ -126,11 +126,7 @@ let viscosityData = [0];
 // var injectionSpeedData = [0];
 
 function ViscosityCurve() {
-  const [intensificationRatio, setIntensificationRatio] = useState(0);
-
-  const handleIntensificationRatioChange = (event) => {
-    setIntensificationRatio(event.target.value);
-  };
+  const [intensificationRatio, setIntensificationRatio] = useState(11.45);
 
   const updateChart = () => {
     viscosityData = dataset.map((element) => element["Viscosity"]);
@@ -192,8 +188,10 @@ function ViscosityCurve() {
       },
     ];
   };
-
-  const calculate = (e, intensificationRatio) => {
+  const handleIntensificationRatioChange = (event) => {
+    setIntensificationRatio(event.target.value);
+  };
+  const calculate = (e) => {
     let previousViscosity = 0;
     dataset.forEach((element) => {
       element["PlasticPressure"] =
@@ -206,7 +204,7 @@ function ViscosityCurve() {
     });
     updateChart();
     e.preventDefault();
-    console.log(dataset);
+    setIntensificationRatio(0);
   };
 
   return (
@@ -220,7 +218,7 @@ function ViscosityCurve() {
             </label>
             <input
               className="viscositycurve__form--intensificationratio-input"
-              type="text"
+              type="number"
               value={intensificationRatio}
               onChange={handleIntensificationRatioChange}
             />
@@ -245,10 +243,11 @@ function ViscosityCurve() {
                 Delete Last Row
               </button>
             </div>
+
             <button
               className="btn btn-calculate"
               onClick={(e) => {
-                calculate(e, intensificationRatio);
+                calculate(e);
               }}
               type="button"
             >
