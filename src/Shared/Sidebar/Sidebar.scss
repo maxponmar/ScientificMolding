@@ -9,6 +9,10 @@
   overflow: auto;
   transition: all 1s;
 
+  @include respond-min(1024px) {
+    width: 180px;
+  }
+
   button {
     display: block;
     color: black;
@@ -71,6 +75,10 @@
     margin: 0;
     top: 1.4rem;
     transition: all 0.3s;
+
+    @include respond-min(1024px) {
+      display: none;
+    }
 
     &--showed {
       left: 130px;

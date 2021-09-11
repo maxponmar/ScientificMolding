@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin respond-between($low, $high) {
+  @media only screen and (max-width: $high) and (min-width: $low) {
+    @content;
+  }
+}
