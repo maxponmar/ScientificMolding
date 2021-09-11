@@ -1,60 +1,37 @@
 @import "/src/Sass/abstracts.scss";
 
-.viscositycurve {
+.cavitybalance {
   padding-top: 5rem;
   // margin-left: 20vh;
   margin-bottom: 30vh;
   text-align: center;
 
-  @include respond-max(1024px) {
-    margin-left: 15vh;
-  }
-
-  @include respond-max(1000px) {
-    margin-left: 10vh;
-  }
-
-  @include respond-max(740px) {
-    margin-left: 5vh;
-  }
-
   &__form {
     font-size: 2rem;
-
-    &--intensificationratio {
-      &-label {
-        padding: 0 1rem;
-      }
-
-      &-input {
-        display: inline-block;
-
-        @include respond-max(320px) {
-          width: 80%;
-        }
-      }
-    }
 
     &--inputgroup {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 1rem 0;
+      margin: 1rem;
 
       span {
         font-size: 1.5rem;
       }
 
       input {
-        width: 7.5rem;
+        width: 8rem;
       }
     }
   }
 
-  &__table {
-    height: 30vh;
+  &__label {
+    font-size: 1.5rem;
   }
 
+  &__table {
+    height: 20vh;
+  }
   &__chart {
     display: block;
     margin: auto;

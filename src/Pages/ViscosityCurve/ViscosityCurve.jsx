@@ -7,9 +7,9 @@ import { Line } from "react-chartjs-2";
 import {
   defaultDataset,
   defaultChartdata,
-  chartOptions,
   dataRow,
-} from "./dataset";
+} from "./viscositycurve-dataset";
+import chartOptions from "../chartoptions";
 
 let dataset = defaultDataset;
 
@@ -83,7 +83,9 @@ function ViscosityCurve() {
   };
 
   const handleNumberRows = (event) => {
-    setNumberOfRows(event.target.value);
+    if (event.target.value > 0) {
+      setNumberOfRows(event.target.value);
+    }
   };
 
   return (
@@ -111,11 +113,15 @@ function ViscosityCurve() {
               id="nRows"
               onChange={handleNumberRows}
             />
-            <button className="btn btn-blue" type="button" onClick={addRows}>
+            <button
+              className="btn btn-blue btn-left"
+              type="button"
+              onClick={addRows}
+            >
               Add Rows
             </button>
             <button
-              className="btn btn-red"
+              className="btn btn-red btn-right"
               type="button"
               onClick={deleteAllRows}
             >
@@ -123,11 +129,15 @@ function ViscosityCurve() {
             </button>
           </div>
           <div className="viscositycurve__form--inputgroup">
-            <button className="btn btn-blue" type="button" onClick={addRow}>
+            <button
+              className="btn btn-blue btn-left"
+              type="button"
+              onClick={addRow}
+            >
               Add Row
             </button>
             <button
-              className="btn btn-red"
+              className="btn btn-red btn-right"
               type="button"
               onClick={deletLastRow}
             >
@@ -144,7 +154,7 @@ function ViscosityCurve() {
           >
             Calculate
           </button>
-          <div className="viscositycurve__table">
+          <div className="table-wrapper viscositycurve__table">
             <HotTable
               licenseKey="non-commercial-and-evaluation"
               colHeaders={true}

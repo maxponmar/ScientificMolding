@@ -78,6 +78,26 @@ input {
   background-color: #198754;
 }
 
+.btn-left {
+  /* padding-right: 0; */
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-right {
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .handsontable th {
   z-index: -1000;
+}
+
+.table-wrapper {
+  display: flex;
+  overflow-x: auto;
+  /* height: 30vh; */
+  margin-left: 20vh;
 }

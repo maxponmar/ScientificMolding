@@ -9,6 +9,7 @@ import Footer from "../Shared/Footer/Footer";
 import ThemeContext from "../Store/ThemeContext";
 import About from "../Pages/About/About";
 import ViscosityCurve from "../Pages/ViscosityCurve/ViscosityCurve";
+import { CavityBalance } from "../Pages/CavityBalance/CavityBalance";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Sidebar />
           <Switch>
             <Route path="/viscositycurve" component={ViscosityCurve} />
+            <Route path="/cavitybalance" component={CavityBalance} />
             <Route path="/about" component={About} />
             <Route path="/" component={Home} />
           </Switch>
